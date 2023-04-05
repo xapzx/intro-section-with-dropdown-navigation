@@ -9,3 +9,118 @@
     --fw-regular: 500;
     --fw-bold: 700;
 }
+
+body {
+    min-height: 100vh;
+    background-color: var(--clr-neutral-white);
+    color: var(--clr-neutral-grey);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-regular);
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    position: relative;
+}
+
+.navbar-toggler {
+    background-color: var(--clr-neutral-white);
+    border: none;
+    flex: 1;
+    z-index: 1;
+    padding: 0;
+}
+
+.navbar-toggler > img {
+    margin-left: auto;
+}
+
+.navbar-menu {
+    background-color: var(--clr-neutral-white);
+    width: 66%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5rem 1.5rem 0 1.5rem;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.register {
+    border: 2px solid var(--clr-neutral-grey);
+    border-radius: 1rem;
+    padding: 0.5rem 0;
+}
+
+.features::after, .company::after {
+    content: "";
+    background-image: url(images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    width: 10px; 
+    height: 6px;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.collapse {
+    display: none;
+}
+
+@media (min-width: 46.875rem) {
+    .header {
+        gap: 4rem;
+        padding: 1.5rem 2.5rem;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-menu {
+        all: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        gap: 2rem;
+        font-size: 0.875rem;
+    }
+
+    .account {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        margin-left: auto;
+        margin-top: 0;
+    }
+
+    .features::after, .company::after {
+        margin-left: 0.5rem;
+    }
+
+    .register {
+        padding: 0.5rem 1.5rem;
+    }
+
+    .collapse {
+        display: flex;
+    }
+}
