@@ -20,13 +20,41 @@
       <img src="images/icon-menu.svg" alt="Hamburger menu icon">
     </button>
     <nav class="navbar-menu collapse">
-      <div class="nav-item features">Features</div>
-      <div class="nav-item company">Company</div>
+      <div class="nav-item-wrapper">
+        <div class="nav-item features">Features</div>
+        <ul class="nav-item-expand expand">
+          <li class="todo">
+            <img src="images/icon-todo.svg" alt="">
+            <p>Todo List</p>
+          </li>
+          <li class="calender">
+            <img src="images/icon-calendar.svg" alt="">
+            <p>Calender</p>
+          </li>
+          <li class="reminders">
+            <img src="images/icon-reminders.svg" alt="">
+            <p>Reminders</p>
+          </li>
+          <li class="planning">
+            <img src="images/icon-planning.svg" alt="">
+            Planning
+          </li>
+        </ul>
+      </div>
+      <div class="nav-item-wrapper">
+        <div class="nav-item company">Company</div>
+        <ul class="nav-item-expand expand">
+          <li>History</li>
+          <li>Our Team</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      
       <div class="nav-item">Careers</div>
       <div class="nav-item">About</div>
       <div class="account">
-        <div class="login">Login</div>
-        <div class="register">Register</div>
+        <div class="nav-item login">Login</div>
+        <div class="nav-item register">Register</div>
       </div>
     </nav>
   </header>

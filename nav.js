@@ -1,6 +1,7 @@
 const toggler = document.querySelector('.navbar-toggler');
 const toggler_img = document.querySelector('.navbar-toggler > img');
 const nav = document.querySelector('.navbar-menu');
+const expand = document.querySelectorAll('.nav-item-wrapper')
 
 toggler.addEventListener('click', () => {
     if(nav.classList.contains('collapse')) {
@@ -10,3 +11,9 @@ toggler.addEventListener('click', () => {
     }
     nav.classList.toggle('collapse');
 })
+
+expand.forEach(element => {
+    element.addEventListener('click', () => {
+        element.querySelector('.nav-item-expand').classList.toggle('expand');
+    })
+});
