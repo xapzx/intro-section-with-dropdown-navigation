@@ -11,7 +11,7 @@
 }
 
 body {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: var(--clr-neutral-white);
     color: var(--clr-neutral-grey);
     font-family: var(--ff-primary);
@@ -104,6 +104,10 @@ ul {
     gap: 1rem;
 }
 
+.expand {
+    display: none;
+}
+
 @media (min-width: 46.875rem) {
     .header {
         gap: 4rem;
@@ -177,8 +181,91 @@ ul {
     .collapse {
         display: flex;
     }
+}
 
-    .expand {
-        display: none;
+.hero-wrapper {
+    padding: 2.5rem 1rem;
+}
+
+.hero-title {
+    color: var(--clr-neutral-black);
+    font-size: 2.2rem;
+}
+
+.hero-desc {
+    font-size: 1rem;
+    padding: 0.875rem 0 1.5rem 0;
+}
+
+.learn-more {
+    background-color: var(--clr-neutral-black);
+    color: var(--clr-neutral-white);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.7rem 1.25rem;
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+}
+
+.sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sponsors > img {
+    margin-top: 3rem;
+    width: 4rem;
+}
+
+@media (min-width: 46.875rem) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        padding: 4rem 8rem 6rem 9rem;
+        gap: 8rem;
+        text-align: left;
+    }
+
+    .hero-wrapper {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .hero-title {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    .hero-desc {
+        font-size: 1.125rem;
+        padding: 3rem 4rem 3rem 0;
+    }
+
+    .learn-more {
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: var(--fw-bold);
+    }
+
+    .learn-more:hover {
+        background-color: var(--clr-neutral-white);
+        color: var(--clr-neutral-black);
+        outline: 1px solid var(--clr-neutral-black);
+        cursor: pointer;
+    }
+
+    .sponsors {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    
+    .sponsors > img {
+        width: 6rem;
     }
 }
